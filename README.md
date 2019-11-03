@@ -1,3 +1,26 @@
+## Installing
+1. Follow the installing section in original README to create environment and install packages.
+2. Make sure torch 1.1.0 is installed. If not go to https://download.pytorch.org/whl/cpu/torch_stable.html 
+to pick up a correct wheel for your environent and install it.
+3. Make sure pytorch-pretrained-bert is installed. Use below to install if necessary
+```bash
+pip install pytorch-pretrained-bert==0.6.2
+```
+4. Install flask
+```bash
+pip install flask
+```
+5. Start service by 
+```bash
+python app_sentiment.py
+```
+6. Service can be called via a get command. Return is should be a string "positive"/"negative"
+```bash
+http://localhost:5000/sentiment?text=Shares in the spin-off of South African e-commerce group Naspers surged more than 25% in the first minutes of their market debut in Amsterdam on Wednesday. Bob van Dijk, CEO of Naspers and Prosus Group poses at Amsterdam%27s stock exchange, as Prosus begins trading on the Euronext stock exchange in Amsterdam, Netherlands, September 11, 2019. REUTERS/Piroschka van de Wouw Prosus comprises Naspers’ global empire of consumer internet assets, with the jewel in the crown a 31% stake in Chinese tech titan Tencent. There is "way more demand than is even available, so that’s good," said the CEO of Euronext Amsterdam, Maurice van Tilburg. "It’s going to be an interesting hour of trade after opening this morning." Euronext had given an indicative price of 58.70 euros per share for Prosus, implying a market value of 95.3 billion euros ($105 billion). The shares jumped to 76 euros on opening and were trading at 75 euros at 0719 GMT.
+```
+
+# --------------------- BELOW IS ORIGINAL README ----------------------------
+
 # FinBERT: Financial Sentiment Analysis with BERT
 
 FinBERT is an NLP model to analyze the sentiment of financial text. It is built by further training
