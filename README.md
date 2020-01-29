@@ -19,12 +19,13 @@ python app_sentiment.py
 http://localhost:5000/sentiment?text=Shares in the spin-off of South African e-commerce group Naspers surged more than 25% in the first minutes of their market debut in Amsterdam on Wednesday. Bob van Dijk, CEO of Naspers and Prosus Group poses at Amsterdam%27s stock exchange, as Prosus begins trading on the Euronext stock exchange in Amsterdam, Netherlands, September 11, 2019. REUTERS/Piroschka van de Wouw Prosus comprises Naspers’ global empire of consumer internet assets, with the jewel in the crown a 31% stake in Chinese tech titan Tencent. There is "way more demand than is even available, so that’s good," said the CEO of Euronext Amsterdam, Maurice van Tilburg. "It’s going to be an interesting hour of trade after opening this morning." Euronext had given an indicative price of 58.70 euros per share for Prosus, implying a market value of 95.3 billion euros ($105 billion). The shares jumped to 76 euros on opening and were trading at 75 euros at 0719 GMT.
 ```
 
-7. In there is error regarding to bert-base-uncased-vocab.txt', we can download it manually from web ans save it to somewhere like 'models\cache\' and point the tokenizer to it -- in finbert.py change below lines (line 601)
+7. In there is error regarding to bert-base-uncased-vocab.txt', we can download it manually from https://stackoverflow.com/questions/4867197/failed-loading-english-pickle-with-nltk-data-load and save it to somewhere like 'models\cache\' and point the tokenizer to it -- in finbert.py change below lines (line 601)
 ```bash
     #tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
     # https://github.com/huggingface/transformers/issues/69#issuecomment-443215315
     tokenizer = BertTokenizer.from_pretrained('models/cache/bert-base-uncased-vocab.txt')
 ```
+8. In case it complaines about nltk english.pickle, follow this and manually download the pickle and save it to any of the folders it sepecifies. https://stackoverflow.com/questions/4867197/failed-loading-english-pickle-with-nltk-data-load
 
 # --------------------- BELOW IS ORIGINAL README ----------------------------
 
